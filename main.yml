@@ -1,6 +1,10 @@
 ---
 - name: "hello world webpage"
-  hosts: localhost
+  hosts: all
+  user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
   roles:
     - prepare
     - apache
